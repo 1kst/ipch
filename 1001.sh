@@ -2,7 +2,7 @@
 
 ADDR="qq.com"
 TMPSTR=$(ping -c 1 ${ADDR} | sed '1{s/[^(]*(//;s/).*//;q}')
-ports=(22 80 443) # 添加你想要监测的端口
+ports=(22 80 443) # 添加你想要监测的端口 多个端口用空格
 check_ip=0
 
 for port in ${ports[@]}
